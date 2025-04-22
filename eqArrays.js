@@ -15,14 +15,19 @@ const eqArrays = function(arr1, arr2) {
       } else {
         flag = false;
         break;
-      }
+      } 
     }
-  
+  } else {
+    flag = false;
+    console.log(`The length of the both arrays doesn't match`);
   }
   return flag;
 };
+  
+
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
 assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), false);
 assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true);
 assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), false);
+assertEqual(eqArrays(["1", "2", "3"], ["1", "2"]), false);
 
