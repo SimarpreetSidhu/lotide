@@ -29,7 +29,6 @@ const flatten = function(arr) {
     if (Array.isArray(arr[i])) {
       for (let j = 0; j < arr[i].length; j++) {
         concatArr.push(arr[i][j]);
-        console.log(`The arr values ${arr[i][j]}`);
       }
     } else {
       concatArr.push(arr[i]);
@@ -40,8 +39,8 @@ const flatten = function(arr) {
 
 let originalNestedArr = [1, 2, [3, 4], 5, [6]];
 
-let concatantedArr = flatten(originalNestedArr); // => [1, 2, 3, 4, 5, 6]
-assertArraysEqual(originalNestedArr, concatantedArr);
+let concatantedArr = flatten(originalNestedArr); 
+assertArraysEqual(concatantedArr, [1,2,3,4,5,6]);
 
 
 
