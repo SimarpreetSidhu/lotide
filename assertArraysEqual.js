@@ -9,16 +9,15 @@ const eqArrays = function(arr1, arr2) {
     }
   } else {
     flag = false;
-    console.log(`The length of the both arrays doesn't match`);
   }
   return flag;
 };
 
 const assertArraysEqual = function(arr1, arr2) {
   if (eqArrays(arr1 , arr2)) {
-    console.log(`Both arrays matched !`);
+    console.log(`✅✅✅ Assertion Passed: ${arr1} === ${arr2}`);
   } else {
-    console.log(`Both arrays doesn't match`);
+    console.log(`🛑🛑🛑 Assertion Failed: ${arr1} !== ${arr2}`);
   }
  
 };
