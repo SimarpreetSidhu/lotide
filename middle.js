@@ -26,12 +26,8 @@ const middle = function(array) {
   let len = array.length;
   let midIndex = Math.floor(len / 2);
 
-  let midArr;
-  console.log(`The len is ${len} and the mid index is ${midIndex}`);
-  
-  if (len <= 2) {
-    midArr = [];
-  } else {
+  let midArr = [];  
+  if (len > 2) {
     if (len % 2 === 0) {
       midArr = array.slice(midIndex - 1, midIndex + 1);
     } else {
@@ -45,6 +41,7 @@ const middle = function(array) {
 console.log(middle([1, 2, 3]));
 console.log(middle([1, 2, 3, 4, 5])); 
 console.log(middle([1, 2, 3, 4, 5,6]));
+console.log(middle([1, 2]));
 
 let originalArr = [1,2,3,4,5,6,7,8,9,10];
 assertArraysEqual(middle(originalArr),[5,6]);
