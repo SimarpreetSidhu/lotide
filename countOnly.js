@@ -14,17 +14,12 @@ const countOnly = function(allItems, itemsToCount) {
     if (itemsToCount[item]) {
       if (results[item] !== undefined) {
         results[item] = results[item] + 1;
-        console.log(`We are adding the KEY to thE obj second time ${item}`);
       } else {
         results[item] = 1;
-        console.log(`We are adding the KEY to thE obj first time ${item}`);
       }
-
     }
   }
-  console.log(results);
   return results;
-
 };
 
 const firstNames = [
