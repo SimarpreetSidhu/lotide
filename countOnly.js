@@ -7,14 +7,19 @@ const assertEqual = function(actual, expected) {
 };
 // allItems: an array of strings that we need to look through
 // itemsToCount: an object specifying what to count
+
 const countOnly = function(allItems, itemsToCount) {
   const results = {};
-  let counter = 0;
-  for (let key in itemsToCount) {
-    if (allItems.includes(key) && itemsToCount[key]) {
-      console.log(key);
-      counter += 1;
-      results[key] = counter;
+  for (let item of allItems) {
+    if (itemsToCount[item]) {
+      if (results[item] !== undefined) {
+        results[item] = results[item] + 1;
+        console.log(`We are adding the KEY to thE obj second time ${item}`);
+      } else {
+        results[item] = 1;
+        console.log(`We are adding the KEY to thE obj first time ${item}`);
+      }
+
     }
   }
   console.log(results);
