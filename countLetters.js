@@ -38,3 +38,9 @@ const entries1 = JSON.stringify(Object.entries(expectedObject));
 const entries2 = JSON.stringify(Object.entries(actualObject));
 
 assertEqual(entries1,entries2);
+
+// Another way to use assertEqual as recommended by AI feedback
+
+for (let key in expectedObject){
+  assertEqual(actualObject[key],expectedObject[key])
+}
