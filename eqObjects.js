@@ -25,7 +25,7 @@ const eqArrays = function(arr1, arr2) {
 const eqObjects = function(object1, object2) {
   let keys1 = Object.keys(object1);
   let keys2 = Object.keys(object2);
-  
+
   if (keys1.length !== keys2.length){
     return false;
   }
@@ -57,8 +57,6 @@ assertEqual(eqObjects(shirtObject, longSleeveShirtObject), false);
 
 const multiColorShirtObject = { colors: ["red", "blue"], size: "medium" };
 const anotherMultiColorShirtObject = { size: "medium", colors: ["red", "blue"] };
-const result = eqObjects(multiColorShirtObject, anotherMultiColorShirtObject);
-console.log(`The result is ${result}`)
 assertEqual(eqObjects(multiColorShirtObject, anotherMultiColorShirtObject), true); // => true
 
 const longSleeveMultiColorShirtObject = {
