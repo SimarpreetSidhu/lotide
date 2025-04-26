@@ -1,14 +1,15 @@
 const letterPositions = function(sentence) {
   let results = {};
-  let noSpaceSentence = sentence.split(" ").join("");
-  for (let i = 0; i < noSpaceSentence.length; i++) {
-    if (results[noSpaceSentence[i]] === undefined) {
-      results[noSpaceSentence[i]] = [i];
-    } else {
-      results[noSpaceSentence[i]] = results[noSpaceSentence[i]].concat([i]);
+  for (let i = 0; i < sentence.length; i++) {
+    if (sentence[i] !== " ") {
+      if (results[sentence[i]] === undefined) {
+        results[sentence[i]] = [i];
+      } else {
+         results[sentence[i]].push(i);
+      }
     }
-    
   }
+  console.log(results)
   return results;
 };
 
