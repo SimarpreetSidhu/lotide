@@ -49,8 +49,8 @@ const assertObjectsEqual = function(actual, expected) {
 
 const shirtObject = { color: "red", size: "medium" };
 const anotherShirtObject = { size: "medium", color: "red" };
-assertObjectsEqual(shirtObject, anotherShirtObject, true);
+assertObjectsEqual(shirtObject, anotherShirtObject);
 
 const actualObject = { name : "Simar", age: 35 ,langauges :['Hindi','Punjabi','English']};
 const expectedObject = {name : "Simar", age: 35 ,langauges :['Hindi','Punjabi','English']};
-assertObjectsEqual(actualObject, expectedObject, false);
+assertObjectsEqual(actualObject, expectedObject);
