@@ -1,23 +1,20 @@
-const assertEqual = require("../assertEqual");
+const assert = require('chai').assert;
 const tail = require("../tail");
- 
-const originalArr = [1,2,3,4,5,6,7,8];
-const slicedArr = tail(originalArr);
-assertEqual(originalArr.length,8);
 
-assertEqual(slicedArr.length , 7);
-assertEqual(slicedArr[0] , originalArr[1]);
+describe("#tail", () => {
+  it("returns the last element [2,3,4,5,6,7,8] for [1,2,3,4,5,6,7,8]", () => {
+    assert.deepEqual(tail([1,2,3,4,5,6,7,8]), [2,3,4,5,6,7,8]);
+  });
 
-const result = tail(["Hello", "Lighthouse", "Labs"]);
-assertEqual(result.length , 2);
-assertEqual(result[0] ,"Lighthouse");
-assertEqual(result[1], "Labs");
-assertEqual(result[2], undefined);
+  it("returns the last element ['Lighthouse', 'Labs'] for ['Hello', 'Lighthouse', 'Labs']", () => {
+    assert.deepEqual(tail(['Hello', 'Lighthouse', 'Labs']), ['Lighthouse', 'Labs']); 
+  });
 
-const result1 = tail([1]);
-assertEqual(result1.length , 0);
-assertEqual(result1[0] , undefined);
+  it("returns the last element undefined for [1]", () => {
+    assert.deepEqual(tail([1]), []);
+  });
 
-const result2 = tail([]);
-assertEqual(result2.length , 0);
-assertEqual(result2[0] , undefined);
+  it("returns 'undefined' for []", () => {
+    assert.deepEqual(tail([]), []); 
+  });
+});
