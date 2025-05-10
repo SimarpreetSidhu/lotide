@@ -10,11 +10,11 @@ describe("#tail", () => {
     assert.deepEqual(tail(['Hello', 'Lighthouse', 'Labs']), ['Lighthouse', 'Labs']); 
   });
 
-  it("returns the last element undefined for [1]", () => {
+  it("returns [] for [1]", () => {
     assert.deepEqual(tail([1]), []);
   });
 
-  it("returns 'undefined' for []", () => {
+  it("returns [] for []", () => {
     assert.deepEqual(tail([]), []); 
   });
 });

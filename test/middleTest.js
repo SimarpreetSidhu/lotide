@@ -10,11 +10,11 @@ describe("#middle", () => {
     assert.deepEqual(middle([1,2,3,4,5,6,7,8,9,10]), [5,6]); 
   });
 
-  it("returns the last element undefined for [1]", () => {
+  it("returns [] for [1]", () => {
     assert.deepEqual(middle([1]), []);
   });
 
-  it("returns 'undefined' for []", () => {
+  it("returns [] for []", () => {
     assert.deepEqual(middle([]), []); 
   });
 });
