@@ -1,8 +1,8 @@
 {
-  "name": "lotide",
+  "name": "@simarpreetsidhu27/lotide",
   "version": "1.0.0",
-  "description": "",
-  "main": "assertArraysEqual.js",
+  "description": "This project was created and published by me as part of my learnings at Lighthouse Labs",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
@@ -14,7 +14,7 @@
     "url": "git+https://github.com/SimarpreetSidhu/lotide.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Simarpreet Sidhu",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/SimarpreetSidhu/lotide/issues"
