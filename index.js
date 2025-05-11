@@ -10,7 +10,7 @@ const eqObjects = require('./eqObjects');
 const eqArrays = require('./eqArrays');
 const countOnly = require('./countOnly');
 const countLetters = require('./countLetters');
-const assertObjectEquals = require('./assertObjectsEqual');
+const assertObjectsEqual = require('./assertObjectsEqual');
 const assertEqual = require('./assertEqual');
 const assertArraysEqual = require('./assertArraysEqual');
 const takeUntil = require('./takeUntil');
@@ -29,7 +29,7 @@ module.exports = {
   eqArrays,
   countOnly,
   countLetters,
-  assertObjectEquals,
+  assertObjectsEqual,
   assertEqual,
   assertArraysEqual,
   takeUntil,
