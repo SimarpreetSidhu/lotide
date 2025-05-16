@@ -1,5 +1,5 @@
 const assert = require('chai').assert;
-const tail = require("../tail");
+const { tail } = require("../index");
 
 describe("#tail", () => {
   it("returns the last element [2,3,4,5,6,7,8] for [1,2,3,4,5,6,7,8]", () => {
@@ -7,7 +7,7 @@ describe("#tail", () => {
   });
 
   it("returns the last element ['Lighthouse', 'Labs'] for ['Hello', 'Lighthouse', 'Labs']", () => {
-    assert.deepEqual(tail(['Hello', 'Lighthouse', 'Labs']), ['Lighthouse', 'Labs']); 
+    assert.deepEqual(tail(['Hello', 'Lighthouse', 'Labs']), ['Lighthouse', 'Labs']);
   });
 
   it("returns [] for [1]", () => {
@@ -15,6 +15,6 @@ describe("#tail", () => {
   });
 
   it("returns [] for []", () => {
-    assert.deepEqual(tail([]), []); 
+    assert.deepEqual(tail([]), []);
   });
 });

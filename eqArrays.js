@@ -5,7 +5,7 @@ const eqArrays = function(arr1, arr2) {
       if (arr1[i] !== arr2[i]) {
         flag = false;
         break;
-      } 
+      }
     }
   } else {
     flag = false;
